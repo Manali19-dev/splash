@@ -18,14 +18,18 @@
                     <form action="/search" method="get" class="search-form">
                         <input type="text" name="query" placeholder="Search..." class="search-bar">
                         <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
-                    </form>
-                    <i class="fas fa-bell notification-icon"></i> <!-- Notification icon -->
+                    </form> &nbsp;&nbsp;
+                    <i class="fas fa-bell notification-icon"></i> &nbsp;&nbsp;
+                    <i class="fas fa-user profile-icon"></i> 
                 </div>
-            </div>
+            </div>            
             <div class="header-text">
                 <h1>The purpose is to<br>teach, bring knowledge to the people</h1>
                 <span class="square"></span>
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, anim id est laborum."</p>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, anim id est
+                    laborum."</p>
                 <button class="common-btn">Read More</button>
                 <div class="line">
                     <span class="line-1"></span><br>
@@ -35,48 +39,23 @@
             </div>
         </div>
     </section>
-    
-    <!-- <section id="header">
-        <div class="container">
-            <img src="images/logo.png" class="logo" alt="">
-            <div class="header-actions">
-                <input type="text" placeholder="Search..." class="search-bar">
-                <i class="fas fa-bell notification-icon"></i> 
-            </div>
-            <div class="header-text">
-                
-                <h1>The purpose is to<br>teach, bring knowledge to the people</h1>
-                <span class="square"></span>
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.Excepteur sint occaecat
-                    cupidatat non proident, anim id est laborum."</p>
-                <button class="common-btn">Read More</button>
-                <div class="line">
-                    <span class="line-1"></span><br>
-                    <span class="line-2"></span><br>
-                    <span class="line-3"></span>
-                </div>
-                
-            </div>
-        </div>
 
-    </section> -->
+    </section>
     <!-- Sign-Up Pop-Up -->
     <div id="signup-popup">
         <div class="popup-content">
             <button class="close-btn">&times;</button>
             <h2>Sign Up Now!</h2>
             <p>Join our learning community to unlock endless learning opportunities.</p>
-            <form action="post">
-                <input type="text" placeholder="Enter Name" required>
-                <input type="email" placeholder="Enter Email" required>
-                <input type="password" placeholder="Enter Password" required>
-                <button class="common-btn">Sign Up</button>
+            <form id="signup-form">
+                <input type="text" id="name" placeholder="Enter Name" required>
+                <input type="email" id="email" placeholder="Enter Email" required>
+                <input type="password" id="password" placeholder="Enter Password" required>
+                <button type="submit" class="common-btn">Sign Up</button>
             </form>
         </div>
     </div>
-
+ 
     <nav id="sideNav">
         <ul>
             <li><a href="#">Home</a></li>
@@ -114,9 +93,9 @@
                     <span class="line-3"></span>
                 </div>
                 <h2>
-                    "Learning is not attained by chance, it must be sought after with ardor and attended with diligence"
+                    "Wisdom is not a product of schooling but of the lifelong attempt to acquire it."
                 </h2>
-                <h3>----Abigail Adams</h3>
+                <h3>---- Albert Einstein</h3>
             </div>
         </div>
     </section>
@@ -172,6 +151,36 @@
                 <img src="images/course.png" alt="">
             </div>
         </div>
+
+        <div class="courses-list">
+            <div class="course-card">
+                <img src="images/course1.jpg" alt="Course 1">
+                <div class="course-info">
+                    <h3>Introduction to Programming</h3>
+                    <p>Learn the basics of programming with interactive exercises and real-world examples.</p><br />
+                    <a href="course1.html" class="common-btn">Enroll Now</a>
+                    <!-- <button class="common-btn">Enroll Now</button> -->
+                </div>
+            </div>
+            <div class="course-card">
+                <img src="images/course2.jpeg" alt="Course 2">
+                <div class="course-info">
+                    <h3>Advanced Web Development</h3>
+                    <p>Take your web development skills to the next level with advanced techniques and frameworks.</p>
+                    <button class="common-btn">Enroll Now</button>
+                </div>
+            </div>
+            <div class="course-card">
+                <img src="images/course3.jpg" alt="Course 3">
+                <div class="course-info">
+                    <h3>Data Science Fundamentals</h3>
+                    <p>Understand the core concepts of data science and learn how to analyze and interpret data.</p>
+                    <button class="common-btn">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     </section>
 
     <!-- offer -->

@@ -11,48 +11,48 @@ menuBtn.onclick = function () {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Toggle side navigation
-    const menuBtn = document.getElementById('menuBtn');
-    const sideNav = document.getElementById('sideNav');
+document.addEventListener('DOMContentLoaded', function() {
+    const popup = document.getElementById('signup-popup');
+    const form = document.getElementById('signup-form');
+    const closeButton = document.querySelector('.close-btn');
 
-    menuBtn.addEventListener('click', function () {  
-        if (sideNav.style.display === 'flex') {
-            sideNav.style.display = 'none';
-        } else {
-            sideNav.style.display = 'flex';
+    // Function to show the popup
+    function showPopup() {
+        // Check if the user has previously closed the popup
+        const hasClosed = localStorage.getItem('hasClosedPopup');
+        if (!hasClosed) {
+            popup.classList.add('show-popup');
         }
+    }
+
+    // Function to hide the popup
+    function hidePopup() {
+        popup.classList.remove('show-popup');
+        // Set a flag in localStorage indicating the popup has been closed
+        localStorage.setItem('hasClosedPopup', 'true');
+    }
+
+    // Form submission handling
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        // Simulate saving data (e.g., send to server)
+        console.log('User Data:', { name, email, password });
+
+        // Hide the popup after successful sign up and set flag
+        hidePopup();
+
+        // Optionally, you can display a success message or redirect
+        // alert('Sign up successful!');
     });
 
-    // Toggle signup popup
-    const signupPopup = document.getElementById('signup-popup');
-    const closeBtn = document.querySelector('#signup-popup .close-btn');
+    // Close button handling
+    closeButton.addEventListener('click', hidePopup);
 
-    function showPopup() {
-        signupPopup.classList.add('show-popup');
-    }
-
-    function hidePopup() {
-        signupPopup.classList.remove('show-popup');
-    }
-
-    closeBtn.addEventListener('click', hidePopup);
-
-    // For demonstration purposes, show the popup after 3 seconds
-    setTimeout(showPopup, 3000);
-});
-
-document.getElementById('search-bar').addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-        e.preventDefault(); // Prevent default form submission
-
-        let query = this.value.trim(); // Get and trim the search query
-        if (query) {
-            // Replace the following with your actual search logic
-            console.log('Searching for:', query);
-
-            // Example redirect to a search results page (update URL as needed)
-            window.location.href = `search-results.html?q=${encodeURIComponent(query)}`;
-        }
-    }
+    // Show the popup on page load if conditions are met
+    showPopup();
 });
