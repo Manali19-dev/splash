@@ -11,6 +11,57 @@ body {
     padding: 0;
 }
 
+.dropbtn {
+    background-image: linear-gradient(to right, #84cdfa 0%, #f48ff4 51%, #fde362 100%);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    box-shadow: 0 0 20px #eee;
+    flex: 1 1 auto;
+    transition: 0.5s;
+    border-radius: 10%;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #f67c7c;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -26,12 +77,14 @@ body {
 .header-inner {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Aligns items to the start */
+    justify-content: flex-start;
+    /* Aligns items to the start */
     flex-wrap: wrap;
 }
 
 .logo {
-    max-width: 150px; /* Adjust as needed */
+    max-width: 150px;
+    /* Adjust as needed */
 }
 
 .header-actions {
@@ -70,7 +123,8 @@ body {
     font-size: 24px;
     color: #f67c92;
     cursor: pointer;
-    position: relative; /* Needed for the ::after pseudo-element */
+    position: relative;
+    /* Needed for the ::after pseudo-element */
 }
 
 .notification-icon::after {
@@ -96,7 +150,8 @@ body {
 }
 
 .profile-icon:hover {
-    color: #007bff; /* Change color on hover */
+    color: #007bff;
+    /* Change color on hover */
 }
 
 /* Media queries for responsive search bar */
@@ -571,6 +626,62 @@ form input {
     padding: 18px 0;
 }
 
+/* FAQ Section */
+#faq {
+    padding: 50px 0;
+    background: #f9f9f9;
+}
+
+#faq h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.faq-item:hover {
+    background: #f0f0f0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.faq-question {
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.faq-question:hover {
+    color: #f67c92;
+}
+
+.faq-answer {
+    padding: 20px;
+    font-size: 16px;
+    color: #555;
+    display: none;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
 /* ---footer--- */
 
 #footer {
@@ -660,21 +771,21 @@ hr {
 /*--media queries--*/
 @media (max-width: 768px) {
     .search-bar {
-      width: 150px;
+        width: 150px;
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     .search-bar {
-      width: 100px;
+        width: 100px;
     }
-  }
-  
-  @media (max-width: 320px) {
+}
+
+@media (max-width: 320px) {
     .search-bar {
-      width: 80px;
+        width: 80px;
     }
-  }
+}
 
 @media only screen and (max-width: 770px) {
     #header {
