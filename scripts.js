@@ -11,7 +11,7 @@ menuBtn.onclick = function () {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const popup = document.getElementById('signup-popup');
     const form = document.getElementById('signup-form');
     const closeButton = document.querySelector('.close-btn');
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Form submission handling
-    form.addEventListener('submit', function(event) {
+    form.addEventListener('submit', function (event) {
         event.preventDefault();
 
         const name = document.getElementById('name').value;
@@ -55,4 +55,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Show the popup on page load if conditions are met
     showPopup();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        item.querySelector('.faq-question').addEventListener('click', () => {
+            item.classList.toggle('active');
+        });
+    });
 });
