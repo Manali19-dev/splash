@@ -288,7 +288,6 @@ body {
     }
 }
 
-
 #header {
     height: 100vh;
     background-image: url(images/illustr.jpg);
@@ -870,4 +869,62 @@ hr {
         flex-basis: 50%;
         margin-bottom: 30px;
     }
+}
+
+#faq {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.faq-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.faq-list {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-question {
+    font-size: 1.2em;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.faq-answer {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.faq-image {
+    flex: 1;
+    text-align: center;
+}
+
+.faq-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

@@ -66,3 +66,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const enrollButtons = document.querySelectorAll('.enroll-btn');
+
+    enrollButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetURL = this.getAttribute('href');
+
+            // Add a click effect
+            this.classList.add('clicked');
+
+            setTimeout(() => {
+                // Redirect to the course page after the animation
+                window.location.href = targetURL;
+            }, 300); // Match with the transition duration in CSS
+        });
+    });
+});
